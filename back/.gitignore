@@ -1,0 +1,5 @@
+.env
+node_modules
+static/books/*
+static/genre-previews/*
+static/previews/*

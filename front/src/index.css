@@ -1,0 +1,79 @@
+section{
+    width: 1140px;
+    min-height: calc(100vh - 50px - 75px - 50px);
+    margin: auto;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #0f2c34;
+    color: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1,h2,h3,h4,h5,h6,a,button{
+    font-family: "Inter", sans-serif;
+}
+
+.reader{
+    width: 100%; /* Ширина формата A4 */
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.reader-page{
+    width: 595px;
+    height: 842px;
+}
+
+.react-pdf__Page__textContent{
+    display: none;
+}
+
+.react-pdf__Page__annotations{
+    display: none;
+}
+
+.btn{
+    outline: none;
+    border: none;
+
+    padding: 0 12px;
+
+    min-height: 29px;
+
+    background: #004C63;
+    color: white;
+
+    min-width: 153px;
+    border-radius: 14.5px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.36px;
+
+    transition: 0.15s all;
+}
+
+.btn:hover{
+    background: white;
+    color: #004C63;
+}
+
+.book-reader-container{
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

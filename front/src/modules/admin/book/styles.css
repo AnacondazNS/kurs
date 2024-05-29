@@ -1,0 +1,9 @@
+.book-page .container{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}

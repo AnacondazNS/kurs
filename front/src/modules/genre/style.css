@@ -1,0 +1,40 @@
+.genre-container{
+    width: 100%;
+}
+
+.genre-container .card{
+    width: 340px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.genre-container .card .photo{
+    width: 320px;
+    height: 320px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    border-radius: 15px;
+}
+
+.genre-container .card .photo img{
+    width: 90%;
+
+    object-fit: fill;
+}
+
+.genre-container > div{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+    flex-wrap: wrap;
+}

@@ -1,0 +1,12 @@
+.admin .card{
+    width: 320px;
+    height: 140px;
+
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 12px 14px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

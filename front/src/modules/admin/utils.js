@@ -1,0 +1,1 @@
+export const IS_CREATE = (id) => id === "create"

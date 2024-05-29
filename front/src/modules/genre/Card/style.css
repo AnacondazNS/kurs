@@ -1,0 +1,63 @@
+.GenreBookCard{
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.GenreBookCard .photo{
+    width: 250px;
+    height: 250px;
+    border-radius: 35px;
+    opacity: 0px;
+
+    width: 231px;
+    height: 224px;
+    border-radius: 30px;
+    border: 2px 0px 0px 0px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.GenreBookCard .photo img{
+    object-fit: cover;
+    width: 220px;
+    height: 214px;
+    border-radius: 30px;
+    border: 2px 0px 0px 0px;
+}
+
+.genre-books-container{
+
+    margin-top: 50px;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.container{
+    width: 100%;
+    margin: 20px 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .GenreBookCard{
+    gap: 10px;
+}
