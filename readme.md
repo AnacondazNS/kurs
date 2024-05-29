@@ -16,9 +16,10 @@
 
 ### Front:
 Открываем терминал и пишем:
+git clone https://github.com/AnacondazNS/kurs.git
 ```
 cd front # - переходим в папку в терминале
-git clone https://github.com/evyz/book-shop.git . -b main # - скачиваем репозиторий (если через гит) и скачиваем ветку main (где лежит фронт-часть)
+
 npm i # - Устанавливаем nodejs-модули (зависимости)
 npm run dev # - запускаем проект
 ```
@@ -27,7 +28,6 @@ npm run dev # - запускаем проект
 Открываем ещё один терминал в нашей папке и пишем туда для бека:
 ```
 cd back # - переходим в папку в терминале
-git clone https://github.com/evyz/book-shop.git . -b master # - скачиваем репозиторий (если через гит) и скачиваем ветку master (где лежит бэк-часть)
 ```
 
 После этого, создаём в папке back файл .env и пишем туда следующее:
@@ -35,9 +35,9 @@ git clone https://github.com/evyz/book-shop.git . -b master # - скачивае
 ```
 PORT=3000
 
-DB_NAME="book-reader" # - Указываем название своей бд
+DB_NAME="baza" # - Указываем название своей бд
 DB_USER="postgres" # - Указываем название юзера (изначально postgres)
-DB_PASS="root" # - Указываем пароль от юзера (изначально postgres)
+DB_PASS="1234" # - Указываем пароль от юзера (изначально postgres)
 DB_HOST="localhost"
 DB_PORT=5432
 
