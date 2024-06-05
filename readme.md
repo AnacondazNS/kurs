@@ -9,14 +9,6 @@
 - [Курсовой проект (Нестерук) (нет пути домой) — копия.docx](https://github.com/user-attachments/files/15593185/default.docx)
 - [Курсовой проект (Нестерук) (нет пути домой) — копия.pdf](https://github.com/user-attachments/files/15593212/default.pdf)
 - [Презентация.pptx](https://github.com/user-attachments/files/15593383/default.pptx)
-## Исходные файлы проекта
-
-
-
-
-
-
-
 
 ## Oбновление гита:
 
