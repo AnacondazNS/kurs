@@ -26,7 +26,7 @@
 
 ## Установка
 
-- GIT (https://git-scm.com/downloads) - если качать код через гит, то скачать его обязательно необходимо!
+- GIT (https://git-scm.com/downloads) - любую говую версию
 - Node.js (https://nodejs.org/en) - минимальная версия 18.16.0 
 - PostgresSql (https://www.postgresql.org/download/) - минимальная версия 12 стабильная
 
