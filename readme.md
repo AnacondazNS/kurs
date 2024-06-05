@@ -67,4 +67,7 @@ SECRET_KEY="secret_123"
 npm i # - Устанавливаем nodejs-модули (зависимости)
 npm run dev # - запускаем проект
 ```
-В терминале для front переходим по ссылке Local:   http://localhost:8000/
+В терминале для front переходим по ссылке Local: 
+```
+http://localhost:8000/
+```
