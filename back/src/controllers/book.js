@@ -4,6 +4,8 @@ const { getPagination } = require("../utils/pagination")
 const fs = require('fs')
 const { Op } = require("sequelize")
 
+//Предоставляем путь к статическим файлам веб-приложения
+
 const PATH_STATIC = path.join(__dirname, '..', '..', 'static')
 
 module.exports = new class BookController{
@@ -21,14 +23,14 @@ module.exports = new class BookController{
             if(role && role === "ADMIN" && ignorePublishStatus){
                 delete where.isPublished
             }
-
+//создаём запрос на список книг и их колличество
             const data = await Book.findAndCountAll({offset, limit, where})
             return res.json(data)
         }catch(err){
             return res.status(400).json(err)
         }
     }
-
+//Извлекаем данные из базы данных и создаём обьект обновления который замещает устаревшие данные
     async unpublishList(req,res){
         try{
             const {limit, offset} = getPagination(req)
@@ -112,12 +114,15 @@ module.exports = new class BookController{
         try{
             const {id} = req.params
             const userId = req.user.id
+            // определяем путь к пдф файлу
             const pathName = path.join(__dirname, '..', '..', 'static', 'books', `${id}.pdf`)
+// читает файл пдф
 
             const file = fs.readFileSync(pathName,'utf-8')
             if(!file){
                 return res.status(404).json({message: "NOT_FOUND"})
             }
+// счётчик колличества прочтений
 
             const book = await Book.findOne({where: {id}})
             book.readCount++
@@ -128,7 +133,7 @@ module.exports = new class BookController{
             return res.status(400).json(err)
         }
     }
-
+//создание книги и проверка на все заполненные поля
     async createBook(req,res,next){
         try{
             const {name, desc, author, publishingHouse, series, genreId, isPublish} = req.body
@@ -139,7 +144,7 @@ module.exports = new class BookController{
                 throw new Error({message: "CHOOSE_FIELDS"})                
             }
             const result = await Book.create({name, desc, author, publishingHouse, series, GenreId: genreId, isPublished: isPublish})
-
+//перемещаем пдф в статику
             try{
                 if(pdf && pdf.mimetype === "application/pdf"){
                     pdf.mv(path.join(PATH_STATIC, 'books', `${result.id}.pdf`))
@@ -147,7 +152,7 @@ module.exports = new class BookController{
             }catch(err){
                 console.log(err)
             }
-
+//перемещаем превью в статику
             try{
                 if(preview && (preview.mimetype === "image/jpeg") || preview.mimetype === "image/jpg"){
                     preview.mv(path.join(PATH_STATIC, 'previews', `${result.id}.jpg`))
@@ -161,7 +166,7 @@ module.exports = new class BookController{
             return res.status(400).json(err)
         }
     }
-
+// удаление книги, после идёт процесс удаления пдф и превью
     async deleteById(req,res){
         try{
             const {id} =  req.params
