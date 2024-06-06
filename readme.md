@@ -8,7 +8,8 @@
 - [DOC017.pdf](https://github.com/user-attachments/files/15593177/DOC017.pdf)
 - [Курсовой проект (Нестерук) (нет пути домой) — копия.docx](https://github.com/user-attachments/files/15593185/default.docx)
 - [Курсовой проект (Нестерук) (нет пути домой) — копия.pdf](https://github.com/user-attachments/files/15593212/default.pdf)
-- [Презентация.pptx](https://github.com/user-attachments/files/15593383/default.pptx)
+- [Презентация Нестерук.pptx](https://github.com/user-attachments/files/15604700/default.pptx)
+
 
 ## Oбновление гита:
 
